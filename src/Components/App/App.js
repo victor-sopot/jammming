@@ -11,7 +11,7 @@ class App extends React.Component {
     this.state = {
       searchResults: [
       {name: 'What', artist: 'Ed Beeran', album: 'Jokes', id: 1}, 
-      {name: 'Here Comes the SUn', artist: 'The Beatles', album: '21 I think', id: 2},
+      {name: 'Here Comes the Sun', artist: 'The Beatles', album: '21 I think', id: 2},
       {name: 'By the Way', artist: 'Red Hot Chili Peppers', album: 'By the Way', id: 3}
     ],
     playlistName: 'Adams playlist',
@@ -21,8 +21,14 @@ class App extends React.Component {
       {name: 'Playlist Some other album', artist: 'Playlist Kidz', album: 'Playlist lols', id: 6}
     ]
     };
+
+    this.addTrack = this.addTrack.bind(this);
   }
-  
+
+  addTrack (savedTrack) {
+    this.state.playlistTracks.find(savedTrack => savedTrack.id === this.state.playlistTracks.id) ? console.log('exist') : this.setState({ name: savedTrack.name, artist: savedTrack.artist, album: savedTrack.album, id: savedTrack.id });
+  }
+
   render () {
     return (
       <div>

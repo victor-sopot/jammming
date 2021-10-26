@@ -10,6 +10,10 @@ class Track extends React.Component {
         }
     }
 
+    addTrack() {
+        
+    }
+
     render () {
         return (
             <div className="Track">
