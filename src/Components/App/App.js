@@ -1,9 +1,9 @@
 import logo from '../../logo.svg';
 import './App.css';
 import React from 'react';
-import { SearchBar } from '../SearchBar/SearchBar';
-import { SearchResults } from '../SearchResults/SearchResults';
-import { Playlist } from '../Playlist/Playlist';
+import SearchBar from '../SearchBar/SearchBar';
+import SearchResults from '../SearchResults/SearchResults';
+import Playlist from '../Playlist/Playlist';
 
 class App extends React.Component {
   constructor (props) {
@@ -16,12 +16,13 @@ class App extends React.Component {
     ],
     playlistName: 'Adams playlist',
     playlistTracks: [
-      {name: 'The What', artist: 'Biggie Smalls', album: 'Ready to Die', id: 5},
-      {name: 'Greatest Hits', artist: 'Queen', album: 'Greatest Hits', id: 4},
-      {name: 'Some other album', artist: 'Kidz', album: 'lols', id: 6}
+      {name: 'Playlist The What', artist: 'Playlist Biggie Smalls', album: 'Playlist Ready to Die', id: 4},
+      {name: 'Playlist Greatest Hits', artist: 'Playlist Queen', album: 'Playlist Greatest Hits', id: 5},
+      {name: 'Playlist Some other album', artist: 'Playlist Kidz', album: 'Playlist lols', id: 6}
     ]
     };
   }
+  
   render () {
     return (
       <div>
